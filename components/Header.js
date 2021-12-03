@@ -1,0 +1,24 @@
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
+
+class Header extends Component {
+    render() {
+        return (
+            <Menu style={{marginTop:10}}>
+                <Menu.Item>
+                    CrowdCoin
+                </Menu.Item>
+                <Menu.Menu position="right">
+                    <Menu.Item>
+                        Campaigns
+                    </Menu.Item>
+                    <Menu.Item>
+                        +
+                    </Menu.Item>
+                </Menu.Menu>
+            </Menu>
+        );
+    }
+}
+
+export default Header;
