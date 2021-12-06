@@ -4,7 +4,6 @@ import { Form, Button, Input ,Message} from "semantic-ui-react";
 import factory from "../../ethereum/factory";
 import web3 from "../../ethereum/web3";
 import {Router} from '../../routes';
-import router from "next/router";
 
 class newCampaign extends Component {
   constructor(props) {
