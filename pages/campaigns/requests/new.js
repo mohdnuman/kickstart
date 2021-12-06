@@ -35,7 +35,7 @@ class AddRequest extends Component {
       await campaign.methods
         .createRequest(description, web3.utils.toWei(value, "ether"), recipient)
         .send({ from: accounts[0] });
-      Router.pushRoute('/campaigns/{this.props.address/requests');  
+      Router.pushRoute(`/campaigns/${this.props.address}/requests`);  
     } catch (err) {
         this.setState({
             errorMessage:err.message
@@ -48,8 +48,11 @@ class AddRequest extends Component {
   render() {
     return (
       <Layout>
-          <Link>
-          
+          <Link to={`/campaigns/${this.props.address}/requests`}>
+          <a>
+              Back
+          </a>
+          </Link>
           <h3>Create A Request</h3>
         <Form onSubmit={this.handleSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
@@ -86,3 +89,5 @@ class AddRequest extends Component {
     );
   }
 }
+
+export default AddRequest;
